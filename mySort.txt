@@ -1,0 +1,51 @@
+README for mySort - ShellSort
+
+Shellsort is a type of insertion sort that moves items many positions ahead that allow
+for exchanging distant items with one another. The main objective of shell sort is reach a gap of 1 
+to compare to the adjecent element to have a fully sorted array. 
+
+Given Array: 12, 34, 54, 2, 3
+
+Step 1: start by finding gap, where n is length 
+
+gap = n/2
+
+gap = 5/2 = 2 remainder 1
+
+
+step 2: compare items with gap size of 2
+therefore, temp selects 2 and compares with 34
+
+temp = 2 
+
+Compares 2 in arr[3] and 34 at arr[1]
+since 2 is less than 34, these items are placed in a temp
+and swapped
+
+output = 12, 2, 54, 34, 3
+
+Step 3: continue using shellsort iteration to swap items 
+into desired sorting
+
+Next selection is 
+
+temp = 3
+
+compares 3 at arr[4] amd 54 at arr[2]
+
+with the selected temp, we now compare 3 and 54, since 54 is 
+larger than 3, items are swapped
+
+output = 12, 2, 3, 34, 54
+
+This reduces the gap to n/4
+
+Step 4: Now gap is reduced to n/4, n = 1, the array elements
+that are lying at the interval of one are sorted, thus the array is 
+now completly sorted
+
+output = 2, 3, 12, 34, 54
+
+Complexity analysis = comparisons of O(n^2) 
+
+
